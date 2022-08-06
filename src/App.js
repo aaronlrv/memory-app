@@ -6,7 +6,9 @@ import Score from "./components/Score";
 function App() {
   return (
     <>
-      <Cards />
+      <div class="h-screen flex justify-center align-middle flex-col bg-[url('/home/aaron/odin-projects/memory-app/src/bg.jpg')]">
+        <Cards />
+      </div>
     </>
   );
 }

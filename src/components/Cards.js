@@ -35,7 +35,7 @@ function Content() {
 
   return (
     <>
-      <div class="flex justify-center align-middle bg-[url('/home/aaron/odin-projects/memory-app/src/bg.jpg')]">
+      <div class="flex justify-center align-middle">
         <div
           class=" grid grid-cols-3 grid-rows-3 gap-5 m-10"
           onClick={(e) => click(e)}
