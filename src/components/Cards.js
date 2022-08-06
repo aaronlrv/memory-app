@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 function Content() {
   let [character, setCharacter] = useState([]);
+  let num;
 
   useEffect(() => {
     async function getCharacter() {
@@ -23,9 +24,11 @@ function Content() {
   return (
     <div class=" grid grid-cols-3 grid-rows-3">
       {character.map((x) => {
+        num = Math.floor(Math.random() * 10);
+        console.log(num);
         return (
-          <div>
-            <img src={x.image} alt="character" srcset="" />
+          <div class={`order-${num}`}>
+            <img src={x.image} alt="character" />
           </div>
         );
       })}
