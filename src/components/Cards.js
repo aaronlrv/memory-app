@@ -1,6 +1,8 @@
 import { Preview } from "@mui/icons-material";
+import { blueGrey } from "@mui/material/colors";
 import { useEffect, useState } from "react";
 import Score from "./Score";
+import bg from "/home/aaron/odin-projects/memory-app/src/bg.jpg";
 
 function Content() {
   let [character, setCharacter] = useState([]);
@@ -33,16 +35,18 @@ function Content() {
 
   return (
     <>
-      <div class="flex justify-center align-middle">
+      <div class="flex justify-center align-middle bg-[url('/home/aaron/odin-projects/memory-app/src/bg.jpg')]">
         <div
-          class=" grid grid-cols-3 grid-rows-3 gap-5"
+          class=" grid grid-cols-3 grid-rows-3 gap-5 m-10"
           onClick={(e) => click(e)}
         >
           {character.map((x) => {
             num = Math.floor(Math.random() * 10);
             return (
-              <div class={`order-${num}`}>
-                <img src={x.image} alt="character" />
+              <div
+                class={`order-${num} h-[229px] w-auto border-solid border-black border-2 `}
+              >
+                <img src={x.image} alt="character" class="h-56 w-auto" />
               </div>
             );
           })}
