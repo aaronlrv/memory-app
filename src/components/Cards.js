@@ -22,7 +22,7 @@ function Content() {
   }, []);
 
   return (
-    <div class=" grid grid-cols-3 grid-rows-3">
+    <div class=" grid grid-cols-3 grid-rows-3 gap-5">
       {character.map((x) => {
         num = Math.floor(Math.random() * 10);
         console.log(num);
